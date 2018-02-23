@@ -23,7 +23,7 @@ function menuClicked() {  alert("You clicked the menu"); }
 var  xhr;  // define the global variable to process the AJAX request 
 function callDivChange() {   
          xhr = new XMLHttpRequest();   
-		 xhr.open("GET", "http://developer.cege.ucl.ac.uk:31068/test.html", true);   
+		 xhr.open("GET", "test.html", true);   
 		 xhr.onreadystatechange = processDivChange;   
 		 try {      
 		   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");   
@@ -44,13 +44,3 @@ if (xhr.readyState < 4)                         // while waiting response from s
     } 
 } 
  xhr = new XMLHttpRequest();   
- var filename = document.getElementById("filename").value;   
- xhr.open("GET", filename, true);   
- xhr.onreadystatechange = processDivChange;   
- try {      
-   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");   
- }   
- catch (e) {   
-         // this only works in internet explorer   
- }   
- xhr.send();
